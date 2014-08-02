@@ -1,4 +1,4 @@
-FROM nacyot/td-agent-base
+FROM nacyot/td-agent:base
 MAINTAINER Daekwon Kim <propellerheaven@gmail.com>
 
 RUN apt-get update

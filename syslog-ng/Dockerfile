@@ -8,4 +8,4 @@ RUN touch /var/log/syslog-ng/logs.txt
 ADD ./config/syslog-ng.conf /etc/syslog-ng/syslog-ng.conf
 
 EXPOSE 514/udp
-CMD syslog-ng --no-caps -F
+CMD syslog-ng --no-caps -dF

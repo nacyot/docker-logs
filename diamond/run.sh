@@ -1,8 +1,8 @@
 #!/bin/sh
 
 HOSTNAME=${HOSTNAME:-"$(hostname)"}
-GRAPHITE_HOST=${HOSTNAME:-"172.17.42.1"}
-GRAPHITE_PORT=${HOSTNAME:-"2003"}
+GRAPHITE_HOST=${GRAPHITE_HOST:-"172.17.42.1"}
+GRAPHITE_PORT=${GRAPHITE_PORT:-"2003"}
 
 sed -i "s/__HOSTNAME__/${HOSTNAME}/g" /chroot/opt/diamond.conf
 sed -i "s/__GRAPHITE_HOST__/${GRAPHITE_HOST}/g" /chroot/opt/diamond.conf

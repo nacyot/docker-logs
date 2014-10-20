@@ -13,7 +13,11 @@ RUN dpkg -i build/diamond_3.*.deb
 
 # Initialize chroot
 RUN bash -c "mkdir -p /chroot/{root,tmp,opt}"
-RUN wget -O /chroot/opt/diamond.conf https://gist.githubusercontent.com/nacyot/d0f9c491f8aa8ff42f16/raw/
 RUN bash -c "cp -r /{lib,lib64,bin,usr,etc,var} /chroot/"
+ADD diamond.conf /chroot/opt/diamond.conf
 
-CMD chroot /chroot /usr/bin/diamond -f -c /opt/diamond.conf --skip-pidfile --skip-change-user -l
+# Run command
+ADD run.sh /opt/Diamond/run.sh
+RUN chmod +x /opt/Diamond/run.sh
+
+CMD /opt/Diamond/run.sh

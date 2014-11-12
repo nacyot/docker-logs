@@ -1,9 +1,10 @@
-FROM nacyot/td-agent:base
+FROM nacyot/td-agent:latest
 MAINTAINER Daekwon Kim <propellerheaven@gmail.com>
 
-RUN apt-get update
-RUN apt-get install -y libcurl3 libcurl3-dev
-RUN gem install fluent-plugin-elasticsearch
+RUN \
+  apt-get update &&\
+  apt-get install -y libcurl3 libcurl3-dev &&\
+  gem install fluent-plugin-elasticsearch
 
 ENV SYSLOG_TAG syslog.udp
 ENV SYSLOG_FORMAT "format /^(?<time>.*?) (?<container_id>.*?) (?<container_name>.*?): (?<message>.*?)$/"
@@ -19,6 +20,7 @@ ENV FLUSH_INTERVAL flush_interval 3s
 ADD ./config/td-agent.conf /etc/td-agent/td-agent.conf 
 ADD ./setup_configs.sh /root/setup_configs.sh
 ADD ./run.sh /root/run.sh
+
 RUN chmod +x ./run.sh ./setup_configs.sh
 EXPOSE 24224 5140/udp
 WORKDIR /root

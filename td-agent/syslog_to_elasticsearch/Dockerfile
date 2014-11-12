@@ -7,8 +7,8 @@ RUN \
   gem install fluent-plugin-elasticsearch
 
 ENV SYSLOG_TAG syslog.udp
-ENV SYSLOG_FORMAT "format \/^(?<time>.*?) (?<host_name>.*?) (?<container_name>.*?): (?<event>.*?)$\/"
-ENV SYSLOG_TIME_FORMAT "time_format %Y-%m-%dT%H:%M:%SZ"
+ENV SYSLOG_FORMAT format \/^(?<time>.*?) (?<host_name>.*?) (?<container_name>.*?): (?<event>.*?)$\/
+ENV SYSLOG_TIME_FORMAT time_format %Y-%m-%dT%H:%M:%SZ
 
 ENV ES_TAG syslog.**
 ENV ES_INDEX_NAME td-agent

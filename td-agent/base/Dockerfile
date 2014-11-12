@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM dockerfile/ubuntu
 MAINTAINER Daekwon Kim <propellerheaven@gmail.com>
 
 RUN \

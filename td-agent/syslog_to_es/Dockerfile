@@ -22,7 +22,7 @@ ADD ./setup_configs.sh /root/setup_configs.sh
 ADD ./run.sh /root/run.sh
 
 RUN chmod +x ./run.sh ./setup_configs.sh
-EXPOSE 24224 5140/udp
+EXPOSE 5140/udp
 WORKDIR /root
 
 CMD ./setup_configs.sh && ./run.sh

@@ -9,9 +9,9 @@ RUN \
   curl -L http://toolbelt.treasuredata.com/sh/install-ubuntu-trusty-td-agent2.sh | sh &&\
   mkdir -p /var/log/td-agent
 
-ENV GEM_HOME /usr/lib/fluent/ruby/lib/ruby/gems/1.9.1/
-ENV GEM_PATH /usr/lib/fluent/ruby/lib/ruby/gems/1.9.1/
-ENV PATH /usr/lib/fluent/ruby/bin:$PATH
+ENV GEM_HOME /opt/td-agent/embedded/lib/ruby/gems/2.1.0/
+ENV GEM_PATH /opt/td-agent/embedded/lib/ruby/gems/2.1.0/
+ENV PATH /opt/td-agent/embedded/bin/:$PATH
 
 ADD ./config/td-agent.conf /etc/td-agent/td-agent.conf 
 EXPOSE 24224

@@ -1,8 +1,7 @@
 #!/bin/bash
 
-sed -i -e "s/::\(SYSLOG_TAG\)::/${SYSLOG_TAG}/g" /etc/td-agent/td-agent.conf
-sed -i -e "s/::\(SYSLOG_FORMAT\)::/${SYSLOG_FORMAT}/g" /etc/td-agent/td-agent.conf
-sed -i -e "s/::\(SYSLOG_TIME_FORMAT\)::/${SYSLOG_TIME_FORMAT}/g" /etc/td-agent/td-agent.conf
+sed -i -e "s/::\(DATA_HOST\)::/${DATA_HOST}/g" /etc/td-agent/td-agent.conf
+sed -i -e "s/::\(DATA_PORT\)::/${DATA_PORT}/g" /etc/td-agent/td-agent.conf
 sed -i -e "s/::\(ES_TAG\)::/${ES_TAG}/g" /etc/td-agent/td-agent.conf
 sed -i -e "s/::\(ES_INDEX_NAME\)::/${ES_INDEX_NAME}/g" /etc/td-agent/td-agent.conf
 sed -i -e "s/::\(ES_TYPE_NAME\)::/${ES_TYPE_NAME}/g" /etc/td-agent/td-agent.conf

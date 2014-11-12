@@ -16,6 +16,7 @@ ADD ./config/td-agent.conf /etc/td-agent/td-agent.conf
 ADD ./setup_configs.sh /root/setup_configs.sh
 ADD ./run.sh /root/run.sh
 
+VOLUME /log-data
 RUN chmod +x /root/run.sh /root/setup_configs.sh
 EXPOSE 24224 5140/udp
 

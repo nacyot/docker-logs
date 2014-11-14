@@ -4,12 +4,13 @@ MAINTAINER Daekwon Kim <propellerheaven@gmail.com>
 RUN \
   apt-get update &&\
   apt-get install -y libcurl3 libcurl3-dev &&\
-  fluent-gem install fluent-plugin-elasticsearch fluent-plugin-forest fluent-plugin-fields-parser fluent-plugin-rewrite-tag-filter
+  fluent-gem install fluent-plugin-elasticsearch fluent-plugin-forest \
+    fluent-plugin-fields-parser fluent-plugin-rewrite-tag-filter fluent-plugin-record-reformer
+
 
 ENV DATA_BIND 0.0.0.0
 ENV DATA_PORT 24224
 
-ENV ES_TAG logspout.**
 ENV ES_HOST elasticsearch.example.com
 ENV ES_PORT 9200
 ENV FLUSH_INTERVAL flush_interval 3s

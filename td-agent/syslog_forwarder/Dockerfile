@@ -2,7 +2,6 @@ FROM nacyot/td-agent:latest
 MAINTAINER Daekwon Kim <propellerheaven@gmail.com>
 
 ENV SYSLOG_TAG syslog.udp
-ENV SYSLOG_FORMAT format \/^(?:<[0-9]+>)?(?<time>.*?) (?<host_name>.*?) (?<container_name>.*?)\[[0-9]+\]: (?<event>.*?)$\/
 ENV SYSLOG_TIME_FORMAT time_format %Y-%m-%dT%H:%M:%SZ
 ENV SYSLOG_BIND 0.0.0.0
 ENV SYSLOG_PORT 5140

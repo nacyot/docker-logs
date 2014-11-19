@@ -1,5 +1,6 @@
 #!/bin/bash
 
+sed -i -e "s/::\(SYSLOG_TYPE\)::/${SYSLOG_TYPE}/g" /etc/td-agent/td-agent.conf
 sed -i -e "s/::\(SYSLOG_TAG\)::/${SYSLOG_TAG}/g" /etc/td-agent/td-agent.conf
 sed -i -e "s/::\(SYSLOG_BIND\)::/${SYSLOG_BIND}/g" /etc/td-agent/td-agent.conf
 sed -i -e "s/::\(SYSLOG_PORT\)::/${SYSLOG_PORT}/g" /etc/td-agent/td-agent.conf

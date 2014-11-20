@@ -15,7 +15,7 @@ RUN \
   bash -c "mkdir -p /chroot/{root,tmp,opt}" &&\
   bash -c "cp -r /{lib,lib64,bin,usr,etc} /chroot/"
 
-ADD ./run.sh /root/run.sh
+ADD ./files/run.sh /root/run.sh
 RUN chmod +x /root/run.sh
 
 ENV NEW_RELIC_LICENSE_KEY ''

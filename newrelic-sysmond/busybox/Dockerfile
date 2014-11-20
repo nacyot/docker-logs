@@ -17,7 +17,8 @@ RUN \
   sh -c "cp -r /lib /chroot/" &&\
   sh -c "cp -r /lib64 /chroot/" &&\
   sh -c "cp -r /bin /chroot/" &&\
-  sh -c "cp -r /etc /chroot/"
+  sh -c "cp -r /etc /chroot/" &&\
+  sh -c "cp -r /dev /chroot/"
 
 ADD ./files/run.sh /root/run.sh
 RUN chmod +x /root/run.sh

@@ -2,8 +2,6 @@ FROM dockerfile/java:oracle-java7
 
 RUN \
   cd /tmp && \
-
-
   wget https://download.elasticsearch.org/kibana/kibana/kibana-4.0.0-rc1-linux-x64.tar.gz &&\
   tar xvzf kibana-4.0.0-rc1-linux-x64.tar.gz && \
   mv /tmp/kibana-4.0.0-rc1-linux-x64 /kibana

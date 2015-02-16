@@ -1,5 +1,6 @@
 port: ::KIBANA_PORT::
 host: "::KIBANA_HOST::"
+elasticsearch_preserve_host: true
 elasticsearch_url: "http://::ES_HOST:::::ES_PORT::"
 kibana_index: "::KIBANA_INDEX::"
 default_app_id: "::APP_ID::"
